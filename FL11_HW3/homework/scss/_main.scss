@@ -1,0 +1,264 @@
+@mixin underline {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background-color: map-get($colors, underlineColor);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: map-get($colors, textColor);
+	background-color: map-get($colors, bodyColor);
+}
+
+.header {
+	position: relative;
+	z-index: -5;
+	background-image: $headerBackground;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom-right-radius: 40% 35%;
+
+	.landing-logo {
+		display: flex;
+
+		img {
+			width: 56px;
+			height: 56px;
+			margin-top: 25px;
+			margin-left: 193px;
+		}
+
+		p {
+			display: flex;
+			flex-direction: column;
+			margin: 30px 0 0 18px;
+			font-size: 30px;
+			line-height: 30px;
+			font-weight: bold;
+			font-family: $logoFont;
+
+			span {
+				margin: 3px 0 0 10px;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+	}
+
+	.header_heading {
+		position: relative;
+		width: 650px;
+		margin-left: 192px;
+		margin-bottom: 0;
+		font-size: 90px;
+		line-height: 90px;
+		font-weight: bold;
+
+		&::after {
+			@include underline;
+			width: 380px;
+			height: 30px;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	.header_text {
+		font-size: 20px;
+		line-height: 30px;
+		margin-top: 40px;
+		margin-left: 192px;
+		white-space: pre-line;
+	}
+
+}
+
+.header_button {
+	width: 180px;
+	padding: 17px 0;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	background-color: map-get($colors, btnColor);
+	border: none;
+	border-radius: 5px;
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor: pointer;
+	margin: 60px 0 215px 192px;
+}
+
+
+.section_text {
+	position: relative;
+	margin: 50px auto 0;
+	width: 530px;
+	font-size: 53px;
+	font-weight: 600;
+
+	&::after {
+		@include underline;
+		width: 240px;
+		height: 15px;
+		right: 10px;
+		bottom: 13px;
+
+	}
+}
+
+.section_card_wrap {
+	display: flex;
+	justify-content: space-between;
+	width: 1540px;
+	margin: 40px auto 263px;
+}
+
+.section_card {
+	box-sizing: border-box;
+	background-color: map-get($colors, cardColor);
+	width: 490px;
+	padding: 20px;
+	border-radius: 5px;
+
+	&:nth-child(3) .section_card_text {
+		margin-top: 40px;
+	}
+}
+
+.section_card_img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.section_card_heading {
+	position: relative;
+	display: inline-block;
+	margin: 25px 0 0; 
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 600;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+
+	&::after {
+		@include underline;
+		width: 100%;
+		height: 17px;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.section_card_text {
+	color: #d1d1d1;
+	margin-bottom: 5px;
+	font-size: $cardFontSize;
+	line-height: 30px;
+	text-align: center;
+	font-family: $logoFont;
+}
+
+
+.section_banner {
+	box-sizing: border-box;
+	width: 1200px;
+	height: 180px;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 50%;
+	bottom: $bannerposition;
+	padding: 0 127px 0 130px;
+	transform: translateX(-50%);
+	background: $bannerGradient;
+	border-radius: 6px;
+
+	.section_banner_heading {
+		position: relative;
+		color: map-get($colors, textColor);
+		font-size: 36px;
+		font-weight: bold;
+		margin-bottom: 20px;
+
+		&::after {
+			@include underline;
+			width: 75px;
+			height: 16px;
+			bottom: 5px;
+			left: 145px;
+		}
+	}
+
+	.section_banner_text {
+		color: #c0c3ce;
+		font-size: 20px;
+	}
+
+	.section_banner_button {
+		@extend .header_button;
+		margin: 0;
+		margin-top: 60px;
+		width: 177px;
+		height: 60px;
+	}
+}
+
+.footer {
+	background-color: map-get($colors, cardColor);
+	color: map-get($colors, footerLogoColor);
+
+	.footer-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 1540px;
+		margin: 0 auto;
+		padding: 150px 0 80px;
+		font-family: $logoFont;
+	}
+
+	.footer_logo {
+		display: flex;
+
+		img {
+			width: 56px;
+			height: 56px;
+		}
+		p {
+			display: flex;
+			flex-direction: column;
+			margin: 0 0 0 25px;
+			font-size: 30px;
+			line-height: 30px;
+			font-weight: bold;
+			font-family: $logoFont;
+
+			span {
+				margin: 3px 0 0 10px;
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+	}
+
+	.footer_text {
+		width: 375px;
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.footer-cr {
+		font-size: 20px;
+	}
+}
+
+
+
