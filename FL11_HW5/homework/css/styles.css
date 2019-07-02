@@ -1,0 +1,395 @@
+body {
+  font-family: roboto;
+  background-color: #0b192f;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+@media (min-width: 480px) {
+  .header {
+    position: relative;
+    background-color: #162b4d;
+    width: 480px;
+    margin: 0 auto 25px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 13px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .nav-toggle::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 1px;
+    background-color: white;
+    box-shadow: 0 6px 0 0 white, 0 12px 0 0 white;
+
+  }
+
+  .main-headline {
+    margin: 0;
+    padding: 100px 0 70px;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .main-headline span {
+    color: #d12955;
+    font-weight: 100;
+  }
+
+  .main-content {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  .card {
+    font-size: 0;
+  }
+
+  .post {
+    padding: 40px 40px 0;
+    color: white;
+  }
+
+  .post h2 {
+    width: 350px;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0 0 40px;
+  }
+
+  .post p {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 50px;
+  }
+
+  .post time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 46px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+  }
+
+  .post time span {
+    margin-top: 10px;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .news-column {
+    margin-bottom: 50px;
+  }
+
+  .aside-card {
+    font-size: 0;
+  }
+
+  .aside-card:first-child {
+    margin-bottom: 25px;
+  }
+
+  .news-post {
+    padding: 40px 40px;
+    background-color: white;
+  }
+
+  .news-post h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 300;
+    color: #0b192f;
+  }
+  .news-post p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #7c8bc0;
+  }
+
+  .footer {
+    width: 360px;
+    margin: 0 auto;
+    padding: 35px 60px;
+    background-color: #162b4d;
+    text-align: center;
+    color: #4a7681;
+    font-size: 14.5px;
+    line-height: 25px;
+  }
+
+  .footer p {
+    margin: 0 auto;
+  }
+
+  .author {
+    width: 130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 768px
+  }
+  
+  .main-content {
+    display: flex;
+    width: 768px;
+    margin-bottom: 25px;
+  }
+
+  .cards-container {
+    margin-right: 20px;
+  }
+
+  .image-wrapper,
+  .post {
+    position: relative;
+  }
+
+  .image-wrapper::after,
+  .post::after {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+
+  .image-wrapper:hover::after,
+  .post:hover::after {
+    display: block;
+  }
+
+  .card:nth-child(1) .image-wrapper:hover::after,
+  .card:nth-child(1) .post:hover::after {
+    background-color: rgba(183, 23, 87, 0.5);
+  }
+
+  .card:nth-child(2) .image-wrapper:hover::after,
+  .card:nth-child(2) .post:hover::after {
+    background-color: rgba(13, 126, 113, 0.5);
+  }
+
+  .card:nth-child(3) .image-wrapper:hover::after,
+  .card:nth-child(3) .post:hover::after {
+    background-color: rgba(177, 102, 14, 0.5);
+  }
+
+  .card:nth-child(4) .image-wrapper:hover::after,
+  .card:nth-child(4) .post:hover::after {
+    background-color: rgba(209, 39, 103, 0.5);
+  }
+
+  .post-5:hover::after {
+    background-color: rgba(45, 149, 187, 0.5);
+  }
+
+  .news-post {
+    padding: 26px 30px;
+    background-color: white;
+  }
+
+  .news-post h3 {
+    margin-bottom: 15px;
+  }
+
+  .news-post p {
+    margin: 0;
+  }
+
+  .footer {
+    width: 648px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 1305px;
+    padding: 0 65px 0 25px;
+  }
+
+  .main-headline {
+    padding: 0;
+    align-self: center;
+  }
+
+  .navigation {
+    display: flex;
+    width: 400px;
+    font-size: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .navigation a {
+    padding: 45px 25px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .navigation a:hover {
+    background-color: #283d5f;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+
+  .main-content {
+    width: 1395px;
+  }
+
+  .cards-container {
+    margin-right: 25px;
+  }
+
+  .card {
+    display: flex;
+    width: 1040px;
+  }
+
+  .image-wrapper,
+  .post {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  .post {
+    position: relative;
+    padding: 40px 45px 0;
+  }
+
+  .post h2 {
+    width: 290px;
+    margin-bottom: 30px;
+    font-size: 58px;
+  }
+
+  .post p {
+    width: 335px;
+    margin: 15px 0 38px;
+    font-size: 17px;
+  }
+
+  .post time {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+  }
+
+  .card:nth-child(even) .post {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+  }
+
+  .card:nth-child(even) .post h2,
+  .card:nth-child(even) .post p {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .card:nth-child(even) .post time {
+    right: auto;
+    left: 15px;
+  }
+
+  .post-5 {
+    padding-bottom: 45px;
+  }
+
+  .post-5,
+  .post-5 h2 {
+    width: 100%;
+  }
+
+  .post-5 p {
+    width: 850px;
+    margin-bottom: 0;
+  }
+
+  .news-post {
+     padding: 40px 40px 45px;
+  }
+
+  .news-post h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .news-post p {
+    font-size: 16.5px;
+  }
+
+  .footer {
+    position: relative;
+    width: 1320px;
+    padding: 40px 35px;
+    text-align: left;
+  }
+
+  .footer p {
+    font-size: 16px;
+  }
+
+  .author {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+  }
+
+
+
+
+
+}
