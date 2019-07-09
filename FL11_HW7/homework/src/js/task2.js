@@ -190,5 +190,3 @@ if (isGameStart) {
 } else {
 	alert('You did not become a billionaire, but can.');
 }
-
-//
